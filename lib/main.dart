@@ -10,7 +10,7 @@ class App extends StatelessWidget {
                debugShowCheckedModeBanner: false,
       home: Scaffold(
           appBar: AppBar(
-            title: Text("Request RunTime Permission in Android Flutter"),
+            title: Text(" RunTime Permission in Android Flutter"),
           ),
           body: SafeArea(
               child: Center(
@@ -31,7 +31,6 @@ class AppPermission extends State<AppState> {
 
     final serviceStatus = await Permission.camera.isGranted ;
 
-    bool isCameraOn = serviceStatus == ServiceStatus.enabled;
 
     final status = await Permission.camera.request();
 
@@ -49,7 +48,6 @@ class AppPermission extends State<AppState> {
 
     final serviceStatusLocation = await Permission.locationWhenInUse.isGranted ;
 
-    bool isLocation = serviceStatusLocation == ServiceStatus.enabled;
 
     final status = await Permission.locationWhenInUse.request();
 
@@ -72,7 +70,7 @@ class AppPermission extends State<AppState> {
               margin: const EdgeInsets.all(10),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlue,
+                  backgroundColor: Colors.lightBlue,
                   padding: EdgeInsets.all(8),
                   textStyle: TextStyle(fontSize: 20),
                 ),
@@ -85,7 +83,7 @@ class AppPermission extends State<AppState> {
               margin: const EdgeInsets.all(10),
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlue,
+                  backgroundColor: Colors.lightBlue,
                   padding: EdgeInsets.all(8),
                   textStyle: TextStyle(fontSize: 20),
                 ),
